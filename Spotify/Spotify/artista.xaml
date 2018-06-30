@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Spotify.artista">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <BoxView Color="Black" Opacity="0.9"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Image Grid.Row="0" Source="artista.png" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30"/>
+
+                </Grid>
+                <Label Text="Artista" FontSize="20" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                <StackLayout Margin="10,155,10,10" BackgroundColor="White">
+                    <SearchBar Placeholder="Buscar Artista" PlaceholderColor="Black" HeightRequest="40" TextColor="Black"/>
+                    <ListView x:Name="ListElemets">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                                <TextCell Text="{Binding Nombre}"  Detail="{Binding Descripcion}" TextColor="Black"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

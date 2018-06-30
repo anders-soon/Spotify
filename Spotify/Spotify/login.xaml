@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Spotify.login">
+    
+        <ContentPage.Content>
+        <Grid>
+            <Image Source="fondo.png" Aspect="AspectFill"/>
+            <BoxView Color="Black" Opacity="0.9"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="spotify.png" WidthRequest="64" HeightRequest="64" Margin="0,50,0,30"/>
+                <StackLayout Grid.Row="1" Padding="30,20">
+                    <Entry Placeholder="Usuario" x:Name="usuario"  PlaceholderColor="White" TextColor="White" />
+                    <Entry Placeholder="Contraseña" x:Name="contraseña"  PlaceholderColor="White" IsPassword="True" TextColor="White"/>
+                    <Button Text="Iniciar Sesión" BackgroundColor="Green" BorderRadius="20" TextColor="White" FontAttributes="Bold" Clicked="Button_Clicked"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="¿Recuperar Cuenta?" TextColor="White"/>
+                        <Label Text="Registrarse" HorizontalOptions="EndAndExpand" TextColor="White" FontAttributes="Italic"/>
+
+                    </StackLayout>
+
+                </StackLayout>
+
+            </Grid>
+
+        </Grid>
+
+        
+    </ContentPage.Content>
+</ContentPage>

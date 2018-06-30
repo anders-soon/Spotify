@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Spotify"
+             x:Class="Spotify.MainPage">
+  
+        <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+            <Image Source="fondo2.png" Aspect="AspectFill"/>
+            <BoxView Color="Black" Opacity="0.9"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="spotify2.png" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30"/>
+
+                <StackLayout Grid.Row="1" Padding="30,20">
+                    <Label Text="Buscar por:" FontSize="20" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                    <Button Text="Artista" x:Name="artista" BackgroundColor="Green" BorderRadius="20" TextColor="White" FontAttributes="Bold" Clicked="artista_Clicked"/>
+                    <Button Text="Álbum" x:Name="album" BackgroundColor="Green" BorderRadius="20" TextColor="White" FontAttributes="Bold" Clicked="album_Clicked"/>
+                    <Button Text="Play List" x:Name="play" BackgroundColor="Green" BorderRadius="20" TextColor="White" FontAttributes="Bold" Clicked="play_Clicked" />
+                    <Button Text="Track" x:Name="track" BackgroundColor="Green" BorderRadius="20" TextColor="White" FontAttributes="Bold" Clicked="track_Clicked" />
+                </StackLayout>
+
+            </Grid>
+
+        </Grid>
+
+
+
+
+
+    </ScrollView>
+    </ContentPage.Content>
+      
+
+</ContentPage>
